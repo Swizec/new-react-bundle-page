@@ -35,3 +35,28 @@ export const DarkSection = ({ children, hasTop, hasBottom }) => {
         </section>
     );
 };
+
+export const LightSection = ({ children, hasTop, hasBottom }) => {
+    let extras = [];
+    if (hasTop) extras.push('has-top');
+    if (hasBottom) extras.push('has-bottom');
+
+    extras = extras.join(' ');
+
+    return (
+        <section className={`section swatch-white-blue ${extras}`}>
+            {hasTop ? <DecorTop /> : null}
+            <div className="container">
+                {children}
+            </div>
+            {hasBottom ? <DecorBottom /> : null}
+        </section>
+    );
+};
+
+export const SectionHeader = ({ headline, subline }) => (
+    <header className="section-header underline">
+        <h1 className="headline super hairline">{headline}</h1>
+        <p>{subline}</p>
+    </header>
+);
