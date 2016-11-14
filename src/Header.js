@@ -18,7 +18,7 @@ export const Menu = () => (
 
                 <nav className="main-navbar">
                     <ul className="nav navbar-nav navbar-right">
-                        {['Why', 'What', 'Who', 'How much'].map(name => (
+                        {['Why', 'What', 'Authors', 'Packages'].map(name => (
                             <li key={name}><a href={`#${linkify(name)}`} >
                             {name}
                             </a></li>
