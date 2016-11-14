@@ -1,0 +1,51 @@
+
+Stephen Grider:
+Modern React with Redux -- $180
+ES6 Javascript: The Complete Developer's Guide -- $80
+
+Meteor and React for Realtime Apps -- $140
+Advanced React and Redux -- $140
+The Compelte React native and Redux Course -- $95
+
+
+Juho Vepsalainen:
+SurviveJS - Webpack -- $16
+SurviveJS - React -- $16
+
+
+Azat Mardan:
+React Native Quickly -- ??
+
+
+Andrzey Krzywda:
+Rails Meets React  -- $49
+React.js By Example -- $40
+
+
+Swizec Teller:
+React + D3js ES6 -- $60 (+free upgrade in December)
+ES6 Cheatshet -- freebie
+
+
+----
+
+Value -->
+Basic: $149
+Epic: $450
+Majestic: $825
+
+---
+
+Price -->
+Basic: $89
+Epic: $249
+Majestic: $495
+
+---
+Last year's sale distribution:
+Basic: 109 == 6.8x
+Epic: 184 == 11.5x
+Majestic: 16 == x
+
+---
+If same numbers --> $63,437
