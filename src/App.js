@@ -19,9 +19,14 @@ class App extends Component {
                         <Content.WhyLove />
                     </LightSection>
 
-                    <DarkSection hasTop="rightAngle">
+                    <DarkSection hasTop="rightSlope"
+                                 hasBottom="zigZag">
                         <Content.WhyPain />
                     </DarkSection>
+
+                    <LightSection id="what">
+                        <Content.What />
+                    </LightSection>
 
                     <footer id="footer" role="contentinfo">
                         Footer

@@ -24,6 +24,14 @@ export const WhyLove = () => (
 
 export const WhyPain = () => (
     <div>
-        Hai
+        <SectionHeader headline='"I spent days learning by myself"'
+                       subline="Then Stephen's course made it click in just 10 hours!"/>
+        <p>&lt;Include more user commentary/pain&gt;</p>
+    </div>
+);
+
+export const What = () => (
+    <div>
+        <SectionHeader headline="What you get" />
     </div>
 );

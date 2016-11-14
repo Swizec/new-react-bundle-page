@@ -35,6 +35,7 @@ export const Jumbotron = () => (
         <header className="section-header underline">
             <h1 className="headline hyper hairline">React Indie Bundle</h1>
             <p className="big">Learn React, support opensource</p>
+            <p>&lt;More description, add lead magnet&gt;</p>
         </header>
     </DarkSection>
 );
