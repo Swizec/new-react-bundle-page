@@ -6,13 +6,13 @@ import * as BottomDecor from './decorations/bottom';
 
 const DecorTop = ({ type = 'leftSlope' }) => (
     <div className="decor-top">
-        {TopDecor[type]}
+        {TopDecor[type] && React.createElement(TopDecor[type])}
     </div>
 );
 
 const DecorBottom = ({ type = 'leftSlope' }) => (
     <div className="decor-bottom">
-        {BottomDecor[type]}
+        {BottomDecor[type] && React.createElement(BottomDecor[type])}
     </div>
 );
 
@@ -31,7 +31,7 @@ export const DarkSection = ({ children, hasTop, hasBottom, ...params }) => {
                 {children}
             </div>
             {hasBottom ?
-             <DecorBottom type={typeof hasTop === 'string' ? hasTop : undefined} /> : null}
+             <DecorBottom type={typeof hasTop === 'string' ? hasBottom : undefined} /> : null}
         </section>
     );
 };

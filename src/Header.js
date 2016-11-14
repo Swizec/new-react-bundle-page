@@ -31,7 +31,7 @@ export const Menu = () => (
 );
 
 export const Jumbotron = () => (
-    <DarkSection hasBottom>
+    <DarkSection hasBottom="leftSlope">
         <header className="section-header underline">
             <h1 className="headline hyper hairline">React Indie Bundle</h1>
             <p className="big">Learn React, support opensource</p>
