@@ -4,6 +4,7 @@ import React from 'react';
 import { linkify } from './helpers';
 import logo from './logo.svg';
 import { DarkSection } from './Section';
+import { TestimonialTweets, Tweet, Testimonial } from './Content';
 
 export const Menu = () => (
     <div className="sticky-wrapper" style={{height: "92px"}}>
@@ -11,14 +12,14 @@ export const Menu = () => (
             <div className="container">
                 <div className="navbar-header">
                     <a href="#" className="navbar-brand">
-                        <img src={logo} style={{height: "70%", display: "inline-block"}} />
+                        <img src={logo} style={{height: "70%", display: "inline-block"}} role="presentation" />
                         React Indie Bundle
                     </a>
                 </div>
 
                 <nav className="main-navbar">
                     <ul className="nav navbar-nav navbar-right">
-                        {['Why', 'What', 'Authors', 'Packages'].map(name => (
+                        {['Why React ❤️', 'What 📖 🎥', 'Authors 🚶', 'Packages 📦'].map(name => (
                             <li key={name}><a href={`#${linkify(name)}`} >
                             {name}
                             </a></li>

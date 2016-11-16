@@ -15,7 +15,7 @@ class App extends Component {
                 <div id="content" role="main">
                     <Jumbotron />
 
-                    <LightSection id="why">
+                    <LightSection id="why_react">
                         <Content.WhyLove />
                     </LightSection>
 

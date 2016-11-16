@@ -50,3 +50,26 @@ Majestic: 16 == x
 
 ---
 If same numbers --> $63,437
+
+
+----
+FREEBIES
+----
+
+a sample chapter from React by Example - http://reactkungfu.com/assets/misc/sample.pdf
+React.js koans - a free repo on github
+https://github.com/arkency/reactjs_koans
+over 2700 stars
+can be used for marketing - "get the books from the authors of the famous React.js koans"
+
+videos on how to solve the first koans
+intro - https://www.youtube.com/watch?v=i6iVyLhMFco
+installation - https://www.youtube.com/watch?v=Csf909B5_Qg
+1st exercise - https://www.youtube.com/watch?v=wSC2Jqy3xLU
+2nd exercise - https://www.youtube.com/watch?v=2iuVq17YQxM
+
+what's inside Rails meets React.js - https://www.youtube.com/watch?v=TxZRJNezvtk
+a webinar how we create the Rails meets React.js book - https://www.youtube.com/watch?v=Mqz3b02-CpE
+last year React Indie Bundle - unpacking - https://www.youtube.com/watch?v=5ry0RkD84RE
+an episode from our podcast about React.js - https://www.youtube.com/watch?v=BeGBOhb64Ao
+webinar recording - react.js from a rails developer point of view - https://blog.jetbrains.com/ruby/2016/04/webinar-recording-react-js-from-a-rails-developers-perspective/
