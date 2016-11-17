@@ -1,7 +1,11 @@
 {
   "main.css": "static/css/main.65027555.css",
   "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.53ec5a46.js",
-  "main.js.map": "static/js/main.53ec5a46.js.map",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "main.js": "static/js/main.58664e82.js",
+  "main.js.map": "static/js/main.58664e82.js.map",
+  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
+  "static/media/rbe-cover.png": "static/media/rbe-cover.70b74e5a.png",
+  "static/media/reactd3_cover.png": "static/media/reactd3_cover.7d9149c8.png",
+  "static/media/survivejs_react.png": "static/media/survivejs_react.6a24e59b.png",
+  "static/media/survivejs_webpack.png": "static/media/survivejs_webpack.2ae23ad7.png"
 }
