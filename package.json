@@ -12,7 +12,8 @@
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.6",
     "react-dom": "^15.3.2",
-    "react-tweet-embed": "^1.0.1"
+    "react-tweet-embed": "^1.0.1",
+    "react-youtube": "^7.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

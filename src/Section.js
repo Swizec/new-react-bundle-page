@@ -1,5 +1,7 @@
 
 import React from 'react';
+import YouTube from 'react-youtube';
+import _ from 'lodash';
 
 import * as TopDecor from './decorations/top';
 import * as BottomDecor from './decorations/bottom';
@@ -34,7 +36,7 @@ export const Section = ({ children, hasTop, hasBottom, padDecor, type = "dark", 
 
     if (padDecor) {
         decorStyle = {padding: '20px 0px',
-                      marginTop: '50px'};
+                      marginTop: '90px'};
     }
 
     if (type === 'dark') {
@@ -66,11 +68,20 @@ export const SectionHeader = ({ headline, subline }) => (
     </header>
 );
 
+export const ProductPic = ({ title, src }) => {
+    if (src.match('youtu.be')) {
+        return <YouTube videoId={_.last(src.split('/'))}
+                        opts={{width: 853, height: 480}}/>;
+    }else{
+        return <img alt={title} src={src} style={{maxHeight: "550px"}} />;
+    }
+};
+
 export const LeftProduct = ({ title, author, src, children }) => (
     <div className="container">
         <Row className="vertical-middle">
             <Column md={6} className="text-center">
-                <img alt={title} src={src} style={{maxHeight: "550px"}} />
+                <ProductPic alt={title} src={src} />
             </Column>
             <Column md={6}>
                 <SectionHeader headline={title} subline={author} />
@@ -88,15 +99,40 @@ export const RightProduct = ({ title, author, src, children }) => (
                 {children}
             </Column>
             <Column md={6} className="text-center">
-                <img alt={name} src={src} style={{maxHeight: "550px"}} />
+                <ProductPic alt={title} src={src} />
             </Column>
         </Row>
     </div>
 );
 
-export const Product = ({ left, right, first, ...props }) => (
-    <LightSection hasTop={first ? null : "cross"} padDecor color="red">
-        {left ? <LeftProduct {...props} /> : null}
-        {right ? <RightProduct {...props} /> : null}
-    </LightSection>
+export const CenterProduct = ({ title, author, src, children }) => (
+    <div className="container">
+        <Row className="text-center">
+            <Column md={12}>
+                <SectionHeader headline={title} subline={author} />
+            </Column>
+        </Row>
+        <Row>
+            <Column md={12} className="text-center">
+                <ProductPic title={title} src={src} />
+            </Column>
+        </Row>
+        <Row>
+            <Column md={8} mdOffset={2} className="text-center" style={{paddingTop: "20px"}}>
+                {children}
+            </Column>
+        </Row>
+    </div>
 );
+
+export const Product = ({ left, right, first, src, ...props }) => {
+    const video = !!src.match('youtu.be');
+
+    return (
+        <LightSection hasTop={first ? null : "cross"} padDecor color="red">
+            {left && !video ? <LeftProduct src={src} {...props} /> : null}
+            {right && !video ? <RightProduct src={src} {...props} /> : null}
+            {video ? <CenterProduct src={src} {...props} /> : null}
+        </LightSection>
+    );
+};
