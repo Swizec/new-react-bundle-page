@@ -4,6 +4,7 @@ import React from 'react';
 import survivejs_react from './covers/survivejs_react.png';
 import survivejs_webpack from './covers/survivejs_webpack.png';
 import rbe_cover from './covers/rbe-cover.png';
+import rmr_cover from './covers/rmr-cover.png';
 import reactd3_cover from './covers/reactd3_cover.png';
 
 export const Products = [
@@ -66,6 +67,16 @@ export const Products = [
         </div>)
     },
 
+    {
+        src: "https://youtu.be/watch?v=jgpX4pjHq-g",
+        title: "Azat's ReactJS Intro Course",
+        author: "Azat Mardan",
+        body: (<div>
+            <p>Stop struggling to code front-end the hard way. React is performing fast DOM manipulations and is easy to learn. No more events attached to the DOM elements. Just declare in React and it will do the necessary manipulations for you (declarative style).</p>
+
+            <p>This course is designed for web developers who are familiar with JavaScript and interested in using React as a view layer for their front-end web apps.</p>
+        </div>)
+    },
 
     {
         src: "https://youtu.be/9rLplsL7ZG8",
@@ -119,6 +130,29 @@ export const Products = [
             <p>This is the tutorial you've been looking for to master building dynamic web apps with Meteor JS, with all the most important topics covered in great depth!</p>
 
             <p><b>Authentication?</b>  Covered.  <b>Routing?</b>  Of course!  <b>Security?</b> We got it.</p>
+        </div>)
+    },
+
+    {
+        src: rmr_cover,
+        title: "Rails meets React.js",
+        author: "Arkency",
+        body: (<div>
+            <p><b>React is the first simple thing since Rails</b></p>
+
+            <h2>Rails meets React will teach you</h2>
+            <ul>
+                <li>How to install and configure React.js in your Rails project</li>
+                <li>How to work with dynamic React based forms</li>
+                <li>How to transform your existing view to React-managed components</li>
+                <li>Detailed knowledge of what you can use React.js for in your projects and how</li>
+                <li>Best practices to work with React.js, with examples</li>
+                <li>How to test React components</li>
+                <li>React.js animations - with a chapter and two videos</li>
+                <li>You will also get Ruby and Coffeescript code for the examples</li>
+                <li>And it begins with a tutorial so that you start with practical skills</li>
+            </ul>
+
         </div>)
     },
 
