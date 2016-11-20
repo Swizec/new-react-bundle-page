@@ -136,3 +136,28 @@ export const Product = ({ left, right, first, src, ...props }) => {
         </LightSection>
     );
 };
+
+export const Author = ({ src, name, title, description, links }) => (
+    <div>
+        <div className="box-hex flat-shadow box-huge">
+            <div className="box-dummy" />
+            <figure className="box-inner">
+                <img className="svg-inject" src={src} alt={name} style={{height: "217px"}} />
+            </figure>
+        </div>
+        <h3 className="text-center">
+            {name}
+            <small className="block">{title}</small>
+        </h3>
+        <p className="text-center">{description}</p>
+        <ul className="list-inline text-center social-icons social-simple">
+            {Object.keys(links).map(type => (
+                <li>
+                    <a href={links[type]} target="_self">
+                        <i className={`fa fa-${type}`} />
+                    </a>
+                </li>
+             ))}
+        </ul>
+    </div>
+);

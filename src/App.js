@@ -28,6 +28,10 @@ class App extends Component {
                         <Content.What />
                     </LightSection>
 
+                    <DarkSection id="authors" hasTop="triangleInverted">
+                        <Content.Authors />
+                    </DarkSection>
+
                     <footer id="footer" role="contentinfo">
                         Footer
                     </footer>

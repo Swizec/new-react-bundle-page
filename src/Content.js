@@ -5,8 +5,9 @@ import _ from 'lodash';
 
 import { Col as Column, Row } from 'react-bootstrap';
 
-import { SectionHeader, LightSection, Product } from './Section';
+import { SectionHeader, LightSection, Product, Author } from './Section';
 import { Products } from './Products';
+import { Authors as AuthorData } from './Authors';
 
 export const LoveTweets = [
     "797773630654607360",
@@ -93,5 +94,28 @@ export const What = () => (
                 {body}
             </Product>
          ))}
+    </div>
+);
+
+export const Authors = () => (
+    <div>
+        <SectionHeader headline="Authors 🚶"
+                       subline="The indie authors behind React Indie Bundle" />
+
+        <Row>
+            {_.take(AuthorData, 3).map(props => (
+                <Column md={4}>
+                    <Author {...props} />
+                </Column>
+             ))}
+        </Row>
+        <Row>
+            <Column md={2} />
+            {_.takeRight(AuthorData, 2).map(props => (
+                <Column md={4}>
+                    <Author {...props} />
+                </Column>
+             ))}
+        </Row>
     </div>
 );
