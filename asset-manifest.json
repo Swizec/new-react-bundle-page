@@ -1,11 +1,17 @@
 {
   "main.css": "static/css/main.65027555.css",
   "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.58664e82.js",
-  "main.js.map": "static/js/main.58664e82.js.map",
+  "main.js": "static/js/main.bab17627.js",
+  "main.js.map": "static/js/main.bab17627.js.map",
+  "static/media/arkency.png": "static/media/arkency.8a1dfc52.png",
+  "static/media/azat.jpg": "static/media/azat.f4a3271d.jpg",
+  "static/media/bebraw.jpg": "static/media/bebraw.d443ae2d.jpg",
   "static/media/logo.svg": "static/media/logo.5d5d9eef.svg",
   "static/media/rbe-cover.png": "static/media/rbe-cover.70b74e5a.png",
   "static/media/reactd3_cover.png": "static/media/reactd3_cover.7d9149c8.png",
+  "static/media/rmr-cover.png": "static/media/rmr-cover.3d1af019.png",
+  "static/media/stephen.jpg": "static/media/stephen.c0547523.jpg",
   "static/media/survivejs_react.png": "static/media/survivejs_react.6a24e59b.png",
-  "static/media/survivejs_webpack.png": "static/media/survivejs_webpack.2ae23ad7.png"
+  "static/media/survivejs_webpack.png": "static/media/survivejs_webpack.2ae23ad7.png",
+  "static/media/swizec.png": "static/media/swizec.2c2981d8.png"
 }
