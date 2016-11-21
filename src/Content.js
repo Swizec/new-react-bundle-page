@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { Col as Column, Row } from 'react-bootstrap';
 
 import { SectionHeader, LightSection, Product, Author, PricingColumn } from './Section';
-import { Products } from './Products';
+import { Products, BasicProducts, EpicProducts, MajesticProducts, Terms } from './Products';
 import { Authors as AuthorData } from './Authors';
 
 export const LoveTweets = [
@@ -88,7 +88,7 @@ export const What = () => (
         <SectionHeader headline="What you get"
                        subline="Books 📖 video courses 🎥  and more 🙌🏼" />
 
-        {Products.map(({ body, ...props }, i) => (
+        {Products.filter(p => p.listed).map(({ body, ...props }, i) => (
             <Product left={i%2 === 0} right={i%2 === 1} first={i === 0} key={i}
                      {...props}>
                 {body}
@@ -123,20 +123,27 @@ export const Authors = () => (
 export const Packages = () => (
     <div>
         <SectionHeader headline="React Indie Bundle Packages"
-                       subline="The best combination for you" />
+                       subline="Pick the bundle that works for you" />
 
         <Row>
-            <PricingColumn name="Basic" price="50"
-                           items={Products.filter(p => ['basic'].includes(p.package))} />
+            <PricingColumn name="Basic Bundle" price="69"
+                           items={BasicProducts}
+                           darkItems={EpicProducts.concat(MajesticProducts)}
+                           terms={Terms.basic}
+                           md={4} />
 
-            <PricingColumn name="Epic" price="50"
-                           items={Products.filter(p => ['basic',
-                                                        'epic'].includes(p.package))} />
+            <PricingColumn name="Epic Bundle" price="195"
+                           items={BasicProducts.concat(EpicProducts)}
+                           darkItems={MajesticProducts}
+                           terms={Terms.epic}
+                           md={4}
+                           featured />
 
-            <PricingColumn name="Epic" price="50"
-                           items={Products.filter(p => ['basic',
-                                                        'epic',
-                                                        'majestic'].includes(p.package))} />
+            <PricingColumn name="Majestic Bundle" price="450"
+                           items={BasicProducts.concat(EpicProducts,
+                                                       MajesticProducts,
+                                                       Terms.majestic)}
+                           md={4} />
         </Row>
     </div>
 );

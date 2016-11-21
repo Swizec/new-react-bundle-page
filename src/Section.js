@@ -162,22 +162,37 @@ export const Author = ({ src, name, title, description, links }) => (
     </div>
 );
 
-const itemPrice = (item, pkg_name) => item[`price_${pkg_name}`] || item.price;
+const itemPrice = (item, pkg_name) => item[`${pkg_name.toLowerCase()}_price`] || item.price;
 
-export const PricingColumn = ({ name, price, items }) => (
-    <div className="pricing-col">
+const packagePrice = (name, items) => items.map(item => itemPrice(item, name))
+                                           .reduce((n, sum) => n+sum, 0);
+
+export const PricingColumn = ({ name, price, items, darkItems, terms, md, featured }) => (
+    <Column className={`pricing-col ${featured ? 'pricing-featured' : ''}`} md={md}>
         <h2 className="pricing-head">{name}</h2>
         <div className="pricing-body">
             <div className="pricing-price">
-                <small>$</small><s>{items.reduce((item, sum) => sum+itemPrice(item, name), 0)}</s>
+                <div className="overlay">
+                    <h4 style={{fontSize: "2.3em", paddingBottom: "0px", opacity: ".7"}}><s>${packagePrice(name, items)}</s></h4>
+                </div>
             </div>
             <div className="pricing-price">
-                <small>$</small>{price}
+                <div className="overlay">
+                    <h4 style={{paddingTop: "10px"}}>${price}</h4>
+                </div>
             </div>
 
             <ul className="pricing-list">
                 {items.map(({ title }, i) => <li key={i}>{title}</li>)}
             </ul>
+
+            {darkItems ? <ul className="pricing-list" style={{marginTop: "-24px"}}>
+             {darkItems.map(({ title }, i) => <li key={i} style={{opacity: .3}}>{title}</li>)}
+             </ul> : null}
+
+            {terms ? <ul className="pricing-list" style={{marginTop: "-24px"}}>
+             {terms.map(({ title }, i) => <li key={i}>{title}</li>)}
+             </ul> : null}
         </div>
-    </div>
+    </Column>
 );

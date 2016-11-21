@@ -14,6 +14,7 @@ export const Products = [
         author: "Stephen Grider",
         package: 'epic',
         price: 180,
+        listed: true,
         body: (<div>
             <p>Master the fundamentals of React and Redux with this tutorial as you develop apps supported by NPM, Webpack, and ES6</p>
             <p>This is the tutorial you've been looking for to master modern web development with React.</p>
@@ -30,6 +31,7 @@ export const Products = [
         author: "Juho Vepsäläinen",
         package: 'basic',
         price: 16,
+        listed: true,
         body: (<div>
             <p>SurviveJS - React shows you how to build a simple Kanban. The idea is that if you can build a simple application, you can probably build something more complex after that. The first application is always the hardest.</p>
 
@@ -43,6 +45,7 @@ export const Products = [
         author: "Arkency",
         package: 'basic',
         price: 49,
+        listed: true,
         body: (<div>
             <p>We think that React.js is the best choice when it comes to build dynamic frontends. We used it in <b>5 big projects we were working on</b>. We got <b>over 2000+ hours of experience</b> with it. And we want to share our knowledge with you - and we already do. We got a Rails meets React.js book, aimed to Ruby on Rails developers. We’ve created and maintain the React.js koans (2000+ stars on GitHub already!).</p>
 
@@ -51,11 +54,19 @@ export const Products = [
     },
 
     {
+        listed: false,
+        title: "React.js by example extras",
+        package: 'epic',
+        price: 0
+    },
+
+    {
         src: "https://youtu.be/N-Wnb9Sk1xw",
         title: "React Native Quickly",
         author: "Azat Mardan",
         package: 'epic',
-        price: 0,
+        price: 50,
+        listed: true,
         body: (<div>
             <p>Start Learning Native iOS Development with JavaScript</p>
             <p>This ebook and screencasts will walk you through developing two mobile iOS app using React Native: Timer and Weather apps.</p>
@@ -68,6 +79,7 @@ export const Products = [
         author: "Juho Vepsäläinen",
         package: 'basic',
         price: 16,
+        listed: true,
         body: (<div>
             <p>The early part of the book explains why Webpack is needed, shows you how to develop Webpack configuration of your own step by step, and then moves onto more advanced topics.</p>
 
@@ -83,6 +95,7 @@ export const Products = [
         author: "Azat Mardan",
         package: 'epic',
         price: 50,
+        listed: true,
         body: (<div>
             <p>Stop struggling to code front-end the hard way. React is performing fast DOM manipulations and is easy to learn. No more events attached to the DOM elements. Just declare in React and it will do the necessary manipulations for you (declarative style).</p>
 
@@ -96,6 +109,7 @@ export const Products = [
         author: "Stephen Grider",
         package: 'majestic',
         price: 140,
+        listed: true,
         body: (<div>
             <p>Detailed walkthroughs on advanced React and Redux concepts - Authentication, Testing, Middlewares, HOC's, and Deployment</p>
             <p>This is the tutorial you've been looking for to take your React and Redux skills to the next level.</p>
@@ -109,8 +123,8 @@ export const Products = [
         title: "React + d3js ES6",
         author: "Swizec Teller",
         package: 'basic',
-        basic_price: 19,
-        epic_price: 60,
+        price: 19,
+        listed: true,
         body: (<div>
             <p>Did you know <b>software engineers make $20,000 more than programmers</b>? I had no idea it was that bad until I built some shiny graphs and saw the difference. I never called myself a programmer again.</p>
 
@@ -119,8 +133,14 @@ export const Products = [
             <p>You want a <b>quick way to build complex visualizations</b>. Build once, use everywhere. In every project.</p>
 
             <p>With <b>React+d3js ES6</b> you'll learn how to build re-usable visualization components in about an hour.</p>
-            <p><b>New edition coming in December. You get it for free</b> with this bundle.</p>
+            <p><b>New edition coming in December. Included with this bundle.</b></p>
         </div>)
+    },
+
+    {
+        title: "React + d3js ES6 extras",
+        package: 'epic',
+        price: 60-19 // additional cost of extras
     },
 
     {
@@ -146,6 +166,7 @@ export const Products = [
         author: "Stephen Grider",
         package: 'majestic',
         price: 140,
+        listed: true,
         body: (<div>
             <p>Master the fundamentals of Meteor and React with this tutorial as you develop secure, dynamic apps</p>
             <p>This is the tutorial you've been looking for to master building dynamic web apps with Meteor JS, with all the most important topics covered in great depth!</p>
@@ -160,6 +181,7 @@ export const Products = [
         author: "Arkency",
         package: 'basic',
         price: 49,
+        listed: true,
         body: (<div>
             <p><b>React is the first simple thing since Rails</b></p>
 
@@ -180,17 +202,68 @@ export const Products = [
     },
 
     {
+        title: "Rails meets React.js extras",
+        package: 'epic',
+        price: 0
+    },
+
+    {
         src: "https://youtu.be/FLfpQ8n_M4s",
         title: "ES6 Javascript: The Complete Developer's Guide",
         author: "Stephen Grider",
         package: 'epic',
         price: 80,
+        listed: true,
         body: (<div>
             <p>ES6 Javascript Development from scratch. Get practice with live examples and learn exactly where to apply ES6 features.</p>
             <p>This is the tutorial you've been looking for to master ES6 Javascript.</p>
 
             <p><b>Generators?</b> We got it. <b>Arrow Functions?</b> Of course. <b>Rest/Spread Operator?</b> Included! And every other new piece of syntax!</p>
         </div>)
-    }
+    },
 
 ];
+
+export const BasicProducts = Products.filter(p => p.package === 'basic');
+
+export const EpicProducts = Products.filter(p => p.package === 'epic');
+
+export const MajesticProducts = Products.filter(p => p.package === 'majestic');
+
+export const Terms = {
+    basic: [
+        {
+            title: <b><big>$7 OSS donation</big></b>,
+            price :0
+        },
+
+        {
+            title: <b>Just for you</b>,
+            price: 0
+        },
+    ],
+
+    epic: [
+        {
+            title: <b><big>$20 OSS donation</big></b>,
+            price: 0
+        },
+
+        {
+            title: <b>Just for you</b>,
+            price: 0
+        },
+    ],
+
+    majestic: [
+        {
+            title: <b><big>$45 OSS donation</big></b>,
+            price: 0
+        },
+
+        {
+            title: <span><b>Team License</b> - share with anyone</span>,
+            price: 75
+        }
+    ]
+}
