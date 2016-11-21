@@ -12,6 +12,8 @@ export const Products = [
         src: "https://youtu.be/fKiSEXHQoM8",
         title: "Modern React with Redux",
         author: "Stephen Grider",
+        package: 'epic',
+        price: 180,
         body: (<div>
             <p>Master the fundamentals of React and Redux with this tutorial as you develop apps supported by NPM, Webpack, and ES6</p>
             <p>This is the tutorial you've been looking for to master modern web development with React.</p>
@@ -26,6 +28,8 @@ export const Products = [
         src: survivejs_react,
         title: "SurviveJS - React",
         author: "Juho Vepsäläinen",
+        package: 'basic',
+        price: 16,
         body: (<div>
             <p>SurviveJS - React shows you how to build a simple Kanban. The idea is that if you can build a simple application, you can probably build something more complex after that. The first application is always the hardest.</p>
 
@@ -37,6 +41,8 @@ export const Products = [
         src: rbe_cover,
         title: "React.js by example",
         author: "Arkency",
+        package: 'basic',
+        price: 49,
         body: (<div>
             <p>We think that React.js is the best choice when it comes to build dynamic frontends. We used it in <b>5 big projects we were working on</b>. We got <b>over 2000+ hours of experience</b> with it. And we want to share our knowledge with you - and we already do. We got a Rails meets React.js book, aimed to Ruby on Rails developers. We’ve created and maintain the React.js koans (2000+ stars on GitHub already!).</p>
 
@@ -48,6 +54,8 @@ export const Products = [
         src: "https://youtu.be/N-Wnb9Sk1xw",
         title: "React Native Quickly",
         author: "Azat Mardan",
+        package: 'epic',
+        price: 0,
         body: (<div>
             <p>Start Learning Native iOS Development with JavaScript</p>
             <p>This ebook and screencasts will walk you through developing two mobile iOS app using React Native: Timer and Weather apps.</p>
@@ -58,6 +66,8 @@ export const Products = [
         src: survivejs_webpack,
         title: "SurviveJS - Webpack",
         author: "Juho Vepsäläinen",
+        package: 'basic',
+        price: 16,
         body: (<div>
             <p>The early part of the book explains why Webpack is needed, shows you how to develop Webpack configuration of your own step by step, and then moves onto more advanced topics.</p>
 
@@ -71,6 +81,8 @@ export const Products = [
         src: "https://youtu.be/watch?v=jgpX4pjHq-g",
         title: "Azat's ReactJS Intro Course",
         author: "Azat Mardan",
+        package: 'epic',
+        price: 50,
         body: (<div>
             <p>Stop struggling to code front-end the hard way. React is performing fast DOM manipulations and is easy to learn. No more events attached to the DOM elements. Just declare in React and it will do the necessary manipulations for you (declarative style).</p>
 
@@ -82,6 +94,8 @@ export const Products = [
         src: "https://youtu.be/9rLplsL7ZG8",
         title: "Advanced React and Redux",
         author: "Stephen Grider",
+        package: 'majestic',
+        price: 140,
         body: (<div>
             <p>Detailed walkthroughs on advanced React and Redux concepts - Authentication, Testing, Middlewares, HOC's, and Deployment</p>
             <p>This is the tutorial you've been looking for to take your React and Redux skills to the next level.</p>
@@ -94,6 +108,9 @@ export const Products = [
         src: reactd3_cover,
         title: "React + d3js ES6",
         author: "Swizec Teller",
+        package: 'basic',
+        basic_price: 19,
+        epic_price: 60,
         body: (<div>
             <p>Did you know <b>software engineers make $20,000 more than programmers</b>? I had no idea it was that bad until I built some shiny graphs and saw the difference. I never called myself a programmer again.</p>
 
@@ -110,6 +127,8 @@ export const Products = [
         src: "https://youtu.be/uRaOyXg3PE0",
         title: "The Complete React Native and Redux Course",
         author: "Stephen Grider",
+        package: 'majestic',
+        price: 95,
         body: (<div>
             <p>iOS and Android App Development from scratch - build fully native mobile apps ridiculously fast!</p>
             <p>If you're tired of spinning your wheels learning Swift or Android, this is the course for you.</p>
@@ -125,6 +144,8 @@ export const Products = [
         src: "https://youtu.be/CI617-BE-Jo",
         title: "Meteor and React for Realtime Apps",
         author: "Stephen Grider",
+        package: 'majestic',
+        price: 140,
         body: (<div>
             <p>Master the fundamentals of Meteor and React with this tutorial as you develop secure, dynamic apps</p>
             <p>This is the tutorial you've been looking for to master building dynamic web apps with Meteor JS, with all the most important topics covered in great depth!</p>
@@ -137,6 +158,8 @@ export const Products = [
         src: rmr_cover,
         title: "Rails meets React.js",
         author: "Arkency",
+        package: 'basic',
+        price: 49,
         body: (<div>
             <p><b>React is the first simple thing since Rails</b></p>
 
@@ -160,6 +183,8 @@ export const Products = [
         src: "https://youtu.be/FLfpQ8n_M4s",
         title: "ES6 Javascript: The Complete Developer's Guide",
         author: "Stephen Grider",
+        package: 'epic',
+        price: 80,
         body: (<div>
             <p>ES6 Javascript Development from scratch. Get practice with live examples and learn exactly where to apply ES6 features.</p>
             <p>This is the tutorial you've been looking for to master ES6 Javascript.</p>

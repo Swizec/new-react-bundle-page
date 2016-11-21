@@ -151,13 +151,33 @@ export const Author = ({ src, name, title, description, links }) => (
         </h3>
         <p className="text-center">{description}</p>
         <ul className="list-inline text-center social-icons social-simple">
-            {Object.keys(links).map(type => (
-                <li>
+            {Object.keys(links).map((type, i) => (
+                <li key={i}>
                     <a href={links[type]} target="_self">
                         <i className={`fa fa-${type}`} />
                     </a>
                 </li>
              ))}
         </ul>
+    </div>
+);
+
+const itemPrice = (item, pkg_name) => item[`price_${pkg_name}`] || item.price;
+
+export const PricingColumn = ({ name, price, items }) => (
+    <div className="pricing-col">
+        <h2 className="pricing-head">{name}</h2>
+        <div className="pricing-body">
+            <div className="pricing-price">
+                <small>$</small><s>{items.reduce((item, sum) => sum+itemPrice(item, name), 0)}</s>
+            </div>
+            <div className="pricing-price">
+                <small>$</small>{price}
+            </div>
+
+            <ul className="pricing-list">
+                {items.map(({ title }, i) => <li key={i}>{title}</li>)}
+            </ul>
+        </div>
     </div>
 );

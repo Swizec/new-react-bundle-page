@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import { Col as Column, Row } from 'react-bootstrap';
 
-import { SectionHeader, LightSection, Product, Author } from './Section';
+import { SectionHeader, LightSection, Product, Author, PricingColumn } from './Section';
 import { Products } from './Products';
 import { Authors as AuthorData } from './Authors';
 
@@ -104,7 +104,7 @@ export const Authors = () => (
 
         <Row>
             {_.take(AuthorData, 3).map(props => (
-                <Column md={4}>
+                <Column md={4} key={props.name}>
                     <Author {...props} />
                 </Column>
              ))}
@@ -112,10 +112,31 @@ export const Authors = () => (
         <Row>
             <Column md={2} />
             {_.takeRight(AuthorData, 2).map(props => (
-                <Column md={4}>
+                <Column md={4} key={props.name}>
                     <Author {...props} />
                 </Column>
              ))}
+        </Row>
+    </div>
+);
+
+export const Packages = () => (
+    <div>
+        <SectionHeader headline="React Indie Bundle Packages"
+                       subline="The best combination for you" />
+
+        <Row>
+            <PricingColumn name="Basic" price="50"
+                           items={Products.filter(p => ['basic'].includes(p.package))} />
+
+            <PricingColumn name="Epic" price="50"
+                           items={Products.filter(p => ['basic',
+                                                        'epic'].includes(p.package))} />
+
+            <PricingColumn name="Epic" price="50"
+                           items={Products.filter(p => ['basic',
+                                                        'epic',
+                                                        'majestic'].includes(p.package))} />
         </Row>
     </div>
 );

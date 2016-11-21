@@ -32,6 +32,10 @@ class App extends Component {
                         <Content.Authors />
                     </DarkSection>
 
+                    <LightSection id="packages">
+                        <Content.Packages />
+                    </LightSection>
+
                     <footer id="footer" role="contentinfo">
                         Footer
                     </footer>
