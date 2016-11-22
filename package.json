@@ -22,5 +22,5 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "www.reactindiebundle.com"
+  "homepage": "http://www.reactindiebundle.com"
 }
