@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Row } from 'react-bootstrap';
 
 import { Menu, Jumbotron } from './Header';
-import { LightSection, DarkSection } from './Section';
+import { LightSection, DarkSection, DripButton } from './Section';
 
 import * as Content from './Content';
 
@@ -17,6 +18,9 @@ class App extends Component {
 
                     <LightSection id="why_react">
                         <Content.WhyLove />
+                        <Row className="text-center">
+                            <DripButton caption="Want!" />
+                        </Row>
                     </LightSection>
 
                     <DarkSection hasTop="rightSlope"
@@ -28,7 +32,8 @@ class App extends Component {
                         <Content.What />
                     </LightSection>
 
-                    <DarkSection id="authors" hasTop="triangleInverted">
+                    <DarkSection id="authors" hasTop="triangleInverted"
+                                 hasBottom="leftSlope">
                         <Content.Authors />
                     </DarkSection>
 
