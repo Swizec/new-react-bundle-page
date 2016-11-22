@@ -37,7 +37,7 @@ export const Jumbotron = () => (
         <header className="section-header underline">
             <h1 className="headline hyper hairline">React Indie Bundle</h1>
             <p className="big" style={{color: 'white'}}><big>Learn React, support opensource</big></p>
-            <p><i>React has arrived.</i> The ecosystem is stabilizing, the best practices are emerging, the engineers who use it are in love.❤️  <i>Now is the time to get in</i>.</p>
+            <p><i>React has arrived.</i> The ecosystem is stabilizing, the best practices are emerging, the library selection is growing, engineers are in love.❤️  <i>Now is the time to get in</i>.</p>
             <p>But it's still hard to get started. The jargon is thick and the ecosystem is big.</p>
             <p><i>React Indie Bundle</i> gives you <i>everything you need</i> to become a React engineer.<br/> Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
             <p className="big">Sales open on <i>Cyber Monday, Nov 28th</i></p>

@@ -233,36 +233,36 @@ export const MajesticProducts = Products.filter(p => p.package === 'majestic');
 export const Terms = {
     basic: [
         {
-            title: <b><big>$7 OSS donation</big></b>,
+            title: <b><big>We donate $7</big></b>,
             price :0
         },
 
         {
-            title: <b>Just for you</b>,
+            title: <span><b>Just for you</b>, no DRM ever</span>,
             price: 0
         },
     ],
 
     epic: [
         {
-            title: <b><big>$20 OSS donation</big></b>,
+            title: <b><big>We donate $20</big></b>,
             price: 0
         },
 
         {
-            title: <b>Just for you</b>,
+            title: <span><b>Just for you</b>, no DRM ever</span>,
             price: 0
         },
     ],
 
     majestic: [
         {
-            title: <b><big>$45 OSS donation</big></b>,
+            title: <b><big>We donate $45</big></b>,
             price: 0
         },
 
         {
-            title: <span><b>Team License</b> - share with anyone</span>,
+            title: <span><b>Just for you</b>, no DRM ever</span>,
             price: 75
         }
     ]
