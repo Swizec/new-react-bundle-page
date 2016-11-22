@@ -86,7 +86,7 @@ export const WhyPain = () => (
 export const What = () => (
     <div>
         <SectionHeader headline="What you get"
-                       subline="Books 📖 video courses 🎥  and more 🙌🏼" />
+                       subline="Books 📚 video courses 📽 and more 🙌🏼" />
 
         {Products.filter(p => p.listed).map(({ body, ...props }, i) => (
             <Product left={i%2 === 0} right={i%2 === 1} first={i === 0} key={i}

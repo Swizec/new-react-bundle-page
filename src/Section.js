@@ -196,3 +196,16 @@ export const PricingColumn = ({ name, price, items, darkItems, terms, md, featur
         </div>
     </Column>
 );
+
+
+export const DripButton = () => (
+    <a className="btn btn-lg btn-warning btn-icon-right"
+       href="https://www.getdrip.com/forms/88924323/submissions/new"
+       data-drip-show-form="88924323">
+
+        I want a sample
+        <span className="hex-alt hex-alt-big">
+            <i className="fa fa-heart" />
+        </span>
+    </a>
+);

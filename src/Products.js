@@ -10,7 +10,7 @@ import reactd3_cover from './covers/reactd3_cover.png';
 export const Products = [
     {
         src: "https://youtu.be/fKiSEXHQoM8",
-        title: "Modern React with Redux",
+        title: "📽 Modern React with Redux",
         author: "Stephen Grider",
         package: 'epic',
         price: 180,
@@ -27,7 +27,7 @@ export const Products = [
 
     {
         src: survivejs_react,
-        title: "SurviveJS - React",
+        title: "📚 SurviveJS - React",
         author: "Juho Vepsäläinen",
         package: 'basic',
         price: 16,
@@ -41,7 +41,7 @@ export const Products = [
 
     {
         src: rbe_cover,
-        title: "React.js by example",
+        title: "📚 React.js by example",
         author: "Arkency",
         package: 'basic',
         price: 49,
@@ -55,14 +55,14 @@ export const Products = [
 
     {
         listed: false,
-        title: "React.js by example extras",
+        title: "📽🛠React.js by example extras",
         package: 'epic',
         price: 0
     },
 
     {
         src: "https://youtu.be/N-Wnb9Sk1xw",
-        title: "React Native Quickly",
+        title: "📽 React Native Quickly",
         author: "Azat Mardan",
         package: 'epic',
         price: 50,
@@ -75,7 +75,7 @@ export const Products = [
 
     {
         src: survivejs_webpack,
-        title: "SurviveJS - Webpack",
+        title: "📚 SurviveJS - Webpack",
         author: "Juho Vepsäläinen",
         package: 'basic',
         price: 16,
@@ -91,7 +91,7 @@ export const Products = [
 
     {
         src: "https://youtu.be/watch?v=jgpX4pjHq-g",
-        title: "Azat's ReactJS Intro Course",
+        title: "📽 Azat's ReactJS Intro Course",
         author: "Azat Mardan",
         package: 'epic',
         price: 50,
@@ -105,7 +105,7 @@ export const Products = [
 
     {
         src: "https://youtu.be/9rLplsL7ZG8",
-        title: "Advanced React and Redux",
+        title: "📽 Advanced React and Redux",
         author: "Stephen Grider",
         package: 'majestic',
         price: 140,
@@ -120,7 +120,7 @@ export const Products = [
 
     {
         src: reactd3_cover,
-        title: "React + d3js ES6",
+        title: "📚 React + d3js ES6",
         author: "Swizec Teller",
         package: 'basic',
         price: 19,
@@ -138,14 +138,14 @@ export const Products = [
     },
 
     {
-        title: "React + d3js ES6 extras",
+        title: "📽🛠 React + d3js ES6 extras",
         package: 'epic',
         price: 60-19 // additional cost of extras
     },
 
     {
         src: "https://youtu.be/uRaOyXg3PE0",
-        title: "The Complete React Native and Redux Course",
+        title: "📽 The Complete React Native and Redux Course",
         author: "Stephen Grider",
         package: 'majestic',
         price: 95,
@@ -162,7 +162,7 @@ export const Products = [
 
     {
         src: "https://youtu.be/CI617-BE-Jo",
-        title: "Meteor and React for Realtime Apps",
+        title: "📽 Meteor and React for Realtime Apps",
         author: "Stephen Grider",
         package: 'majestic',
         price: 140,
@@ -177,7 +177,7 @@ export const Products = [
 
     {
         src: rmr_cover,
-        title: "Rails meets React.js",
+        title: "📚 Rails meets React.js",
         author: "Arkency",
         package: 'basic',
         price: 49,
@@ -202,14 +202,14 @@ export const Products = [
     },
 
     {
-        title: "Rails meets React.js extras",
+        title: "📽🛠 Rails meets React.js extras",
         package: 'epic',
         price: 0
     },
 
     {
         src: "https://youtu.be/FLfpQ8n_M4s",
-        title: "ES6 Javascript: The Complete Developer's Guide",
+        title: "📽 ES6 Javascript: The Complete Developer's Guide",
         author: "Stephen Grider",
         package: 'epic',
         price: 80,
