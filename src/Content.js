@@ -171,9 +171,11 @@ export const What = () => (
                 <img src={bundleCover} title="Books, videos, cheatsheets, living code" />
             </Column>
             <Column md={4}>
-                <p>React Indie Bundle gives you everything you need to become a React engineer. Bla bla bla, 6 books totalling over 600 pages, 72 hours of video materials, and many living projects to play with.</p>
-                <p><i>React has arrived.</i> The ecosystem is stabilizing, the best practices are emerging, the library selection is growing, engineers are in love.❤️  <i>Now is the time to get in</i>.</p>
-                <p>But it's still hard to get started. The jargon is thick and the ecosystem is big.</p>
+                <p>On Cyber Monday, 2015 we launched the first React Indie Bundle. It was great, the community loved it, and we donated 10% to our fav opensource projects.</p>
+
+                <p>This year we're launching <i>a new bundle</i>: 6 books 📚 totalling over 600 pages, 72 hours of video courses 📽, cheatsheets 📖  for a quick lookup, living projects 🛠 to play with. <i>Everything you need to become a React Engineer</i></p>
+
+                <p>Scroll down to see what's inside, or <a href="#packages">jump straight to the packages</a></p>
             </Column>
         </Row>
     </div>
