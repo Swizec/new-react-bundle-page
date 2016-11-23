@@ -1,13 +1,14 @@
 
-import React from 'react';
+import React, { Component } from 'react';
 import TweetEmbed from './react-tweet-embed';
 import _ from 'lodash';
 
 import { Col as Column, Row } from 'react-bootstrap';
 
-import { SectionHeader, LightSection, Product, Author, PricingColumn } from './Section';
+import { SectionHeader, LightSection, Product, Author, PricingColumn, DripButton } from './Section';
 import { Products, BasicProducts, EpicProducts, MajesticProducts, Terms } from './Products';
 import { Authors as AuthorData } from './Authors';
+import bundleCover from './covers/bundle-cover-play-icons.png';
 
 export const LoveTweets = [
     "797773630654607360",
@@ -57,23 +58,51 @@ export const Testimonial = ({ who, src, md = 12, mdOffset = 0, children }) => (
     </blockquote>
 );
 
-export const WhyLove = () => (
-    <div>
-        <SectionHeader headline="Build better webapps faster"
-                       subline="Why engineers ❤️ React" />
+class WhyLove extends Component {
+    state = { N: 6 }
+
+    more() {
+        const { N } = this.state;
+        this.setState({N: N+3});
+    }
+
+    render() {
+        const { N } = this.state;
+
+        return (
+            <div>
+                <SectionHeader headline="Build better webapps faster"
+                               subline="Why engineers ❤️ React" />
 
 
-    {_.chunk(LoveTweets, 3).map((tweets, i) => (
-        <Row key={i}>
-            {tweets.map((id, i) => (
-                <Column md={4} key={i}>
-                    <Tweet id={id} />
-                </Column>
-             ))}
-        </Row>
-    ))}
-    </div>
-);
+                {_.chunk(_.take(LoveTweets, N), 3).map((tweets, i) => (
+                    <Row key={i}>
+                    {tweets.map((id, i) => (
+                        <Column md={4} key={i}>
+                        <Tweet id={id} />
+                        </Column>
+                    ))}
+                    </Row>
+                 ))}
+
+             <Row className="text-center">
+                 {N >= LoveTweets.length ? <DripButton caption="I want this!" /> :
+                       <a className="btn btn-lg btn-primary btn-icon-right"
+                  onClick={this.more.bind(this)}>
+                  Load more Love
+
+                  <span className="hex-alt hex-alt-big">
+                         <i className="fa fa-heart" />
+                     </span>
+                       </a>
+                  }
+             </Row>
+            </div>
+        )
+    }
+}
+
+export { WhyLove };
 
 export const WhyPain = () => (
     <div>
@@ -133,14 +162,29 @@ export const WhyPain = () => (
 );
 
 export const What = () => (
-    <div>
+    <div className="container">
         <SectionHeader headline="What you get"
                        subline="Books 📚 video courses 📽 and more 🙌🏼" />
 
+        <Row className="vertical-middle">
+            <Column md={8}>
+                <img src={bundleCover} title="Books, videos, cheatsheets, living code" />
+            </Column>
+            <Column md={4}>
+                <p>React Indie Bundle gives you everything you need to become a React engineer. Bla bla bla, 6 books totalling over 600 pages, 72 hours of video materials, and many living projects to play with.</p>
+                <p><i>React has arrived.</i> The ecosystem is stabilizing, the best practices are emerging, the library selection is growing, engineers are in love.❤️  <i>Now is the time to get in</i>.</p>
+                <p>But it's still hard to get started. The jargon is thick and the ecosystem is big.</p>
+            </Column>
+        </Row>
+    </div>
+);
+
+export const AllTheThings = () => (
+    <div>
         {Products.filter(p => p.listed).map(({ body, ...props }, i) => (
             <Product left={i%2 === 0} right={i%2 === 1} first={i === 0} key={i}
-                     {...props}>
-                {body}
+            {...props}>
+            {body}
             </Product>
          ))}
     </div>

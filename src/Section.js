@@ -40,9 +40,17 @@ export const Section = ({ children, hasTop, hasBottom, padDecor, type = "dark", 
     }
 
     if (type === 'dark') {
-        swatch = `swatch-${color}-white`;
+        if (color.includes('-')) {
+            swatch = `swatch-${color}`;
+        }else{
+            swatch = `swatch-${color}-white`;
+        }
     }else{
-        swatch = `swatch-white-${color}`;
+        if (color.includes('-')) {
+            swatch = `swatch-${color}`;
+        }else{
+            swatch = `swatch-white-${color}`;
+        }
     }
 
     return (
@@ -60,6 +68,7 @@ export const Section = ({ children, hasTop, hasBottom, padDecor, type = "dark", 
 
 export const DarkSection = ({ ...props }) => <Section type="dark" {...props} />;
 export const LightSection = ({ ...props }) => <Section type="light" {...props} />;
+export const HighLightSection = (props) => <Section type="dark" color="yellow-black" {...props} />;
 
 export const SectionHeader = ({ headline, subline }) => (
     <header className="section-header underline">
@@ -208,5 +217,14 @@ export const DripButton = ({ caption = "I want a sample" }) => (
         <span className="hex-alt hex-alt-big">
             <i className="fa fa-heart" />
         </span>
+    </a>
+);
+
+export const DripLink = ({ children }) => (
+    <a href="https://www.getdrip.com/forms/88924323/submissions/new"
+       data-drip-show-form="88924323"
+       style={{textDecoration: 'underline'}}>
+
+        {children}
     </a>
 );
