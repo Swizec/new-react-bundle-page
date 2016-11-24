@@ -222,6 +222,25 @@ export const Products = [
         </div>)
     },
 
+    {
+        src: "",
+        title: "Interviews with ecosystem creators",
+        author: 'The Bundle Authors',
+        package: 'majestic',
+        price: 75,
+        listed: true,
+        body: (<div>
+            <p>You say who, we make it happen.</p>
+            <p>We're going to interview our favorite React ecosystem creators within a month or two of the bundle. Recorded sessions on Skype/Hangouts, asking <i>your</i> favorite questions. You get the video, a transcript, and a summary.</p>
+            <p>Confirmed interviews so far are:
+               <ul>
+                   <li>Tobias Koppers, sokra - creator of Webpack</li>
+                   <li>Michel Weststrate - creator of MobX</li>
+                   <li>Jason Miller - creator of Preact</li>
+               </ul>
+            </p>
+        </div>)
+    }
 ];
 
 export const BasicProducts = Products.filter(p => p.package === 'basic');
@@ -263,7 +282,7 @@ export const Terms = {
 
         {
             title: <span><b>Just for you</b>, no DRM ever</span>,
-            price: 75
+            price: 0
         }
     ]
 }

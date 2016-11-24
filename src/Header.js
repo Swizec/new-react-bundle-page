@@ -47,3 +47,16 @@ export const Jumbotron = () => (
         </header>
     </DarkSection>
 );
+
+export const JumbotronFooter = () => (
+    <div className="section-header">
+        <h1 className="headline hyper hairline">React Indie Bundle</h1>
+        <p className="big" style={{color: 'white'}}>
+            <big>Everything you need to become a React engineer.</big>
+        </p>
+        <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
+        <p>&nbsp;</p>
+        <p className="big">Sales open on <i>Cyber Monday, Nov 28th</i></p>
+        <p><DripButton /></p>
+    </div>
+)

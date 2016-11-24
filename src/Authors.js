@@ -35,7 +35,6 @@ export const Authors = [
         description: 'Digital nomad and full stack web engineer. Travels the world and helps startups win. From setting up new teams and training juniors, to fixing spaghetti code and implementing new features. His work has appeared in Business Insider, LifeHacker, Huffington Post, and dead-tree magazines.',
         links: {
             twitter: 'https://twitter.com/Swizec',
-            facebook: 'https://www.facebook.com/swizecpage/'
         }
     },
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-bootstrap';
 
-import { Menu, Jumbotron } from './Header';
+import { Menu, Jumbotron, JumbotronFooter } from './Header';
 import { LightSection, DarkSection, DripButton, HighLightSection } from './Section';
 
 import * as Content from './Content';
@@ -42,9 +42,11 @@ class App extends Component {
                         <Content.Packages />
                     </LightSection>
 
-                    <footer id="footer" role="contentinfo">
-                        Footer
-                    </footer>
+                    <DarkSection hasTop="triangleInverted">
+                        <footer id="footer" role="contentinfo">
+                            <JumbotronFooter />
+                        </footer>
+                    </DarkSection>
                 </div>
             </div>
         );
