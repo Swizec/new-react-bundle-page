@@ -13,12 +13,18 @@ export const Menu = () => (
             <div className="container">
                 <div className="navbar-header">
                     <a href="#" className="navbar-brand">
-                        <img src={logo} style={{height: "70%", display: "inline-block"}} role="presentation" />
+                        <img src={logo} style={{height: "60%", display: "inline-block"}} role="presentation" />
                         React Indie Bundle
                     </a>
+
+                    <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar" style={{marginRight: "5px"}}>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                    </button>
                 </div>
 
-                <nav className="main-navbar">
+                <nav className="main-navbar navbar-collapse collapse" role="navigation">
                     <ul className="nav navbar-nav navbar-right">
                         {['Why React ❤️', 'What 📚 📽', 'Authors 🚶', 'Packages 📦'].map(name => (
                             <li key={name}><a href={`#${linkify(name)}`} >
