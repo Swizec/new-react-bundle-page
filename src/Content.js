@@ -241,7 +241,7 @@ export const Packages = () => (
                            items={BasicProducts}
                            darkItems={EpicProducts.concat(MajesticProducts)}
                            terms={Terms.basic}
-                           gumroad="ZwBEy"
+                           gumroad="Gqcy/bundle"
                            md={4} />
 
             <PricingColumn name="Epic Bundle" price="195"
@@ -249,14 +249,14 @@ export const Packages = () => (
                            darkItems={MajesticProducts}
                            terms={Terms.epic}
                            md={4}
-                           gumroad="ZwBEy"
+                           gumroad="ZwBEy/bundle"
                            featured />
 
             <PricingColumn name="Majestic Bundle" price="450"
                            items={BasicProducts.concat(EpicProducts,
                                                        MajesticProducts,
                                                        Terms.majestic)}
-                           gumroad="jjVvf"
+                           gumroad="jjVvf/bundle"
                            md={4} />
         </Row>
         <Row>
