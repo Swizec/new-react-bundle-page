@@ -95,6 +95,7 @@ export const LeftProduct = ({ title, author, src, children }) => (
             <Column md={6}>
                 <SectionHeader headline={title} subline={author} />
                 {children}
+                <p className="text-center"><br /><WantButton /></p>
             </Column>
         </Row>
     </div>
@@ -106,6 +107,7 @@ export const RightProduct = ({ title, author, src, children }) => (
             <Column md={6}>
                 <SectionHeader headline={title} subline={author} />
                 {children}
+                <p className="text-center"><br /><WantButton /></p>
             </Column>
             <Column md={6} className="text-center">
                 <ProductPic alt={title} src={src} />
@@ -129,6 +131,8 @@ export const CenterProduct = ({ title, author, src, children }) => (
         <Row>
             <Column md={8} mdOffset={2} className="text-center" style={{paddingTop: "20px"}}>
                 {children}
+
+                <p><br /><WantButton /></p>
             </Column>
         </Row>
     </div>
@@ -183,7 +187,7 @@ const itemPrice = (item, pkg_name) => item[`${pkg_name.toLowerCase()}_price`] ||
 const packagePrice = (name, items) => items.map(item => itemPrice(item, name))
                                            .reduce((n, sum) => n+sum, 0);
 
-export const PricingColumn = ({ name, price, items, darkItems, terms, md, featured }) => (
+export const PricingColumn = ({ name, price, items, darkItems, terms, md, featured, gumroad }) => (
     <Column className={`pricing-col ${featured ? 'pricing-featured' : ''}`} md={md}>
         <h2 className="pricing-head">{name}</h2>
         <div className="pricing-body">
@@ -209,7 +213,14 @@ export const PricingColumn = ({ name, price, items, darkItems, terms, md, featur
             {terms ? <ul className="pricing-list" style={{marginTop: "-24px"}}>
              {terms.map(({ title }, i) => <li key={i}>{title}</li>)}
              </ul> : null}
+
+             <a className="gumroad-button"
+                href={`https://gum.co/${gumroad}?wanted=true`}
+                target="_blank">Buy Now <i>${price}</i></a>
+             <br />
+             <small>Sales close Dec 5th</small>
         </div>
+
     </Column>
 );
 
@@ -217,7 +228,8 @@ export const PricingColumn = ({ name, price, items, darkItems, terms, md, featur
 export const DripButton = ({ caption = "I want a sample" }) => (
     <a className="btn btn-lg btn-warning btn-icon-right"
        href="https://www.getdrip.com/forms/88924323/submissions/new"
-       onClick={() => window._dcq.push(["showForm", { id: "88924323" }])}
+    onClick={(e) => {e.preventDefault();
+        window._dcq.push(["showForm", { id: "88924323" }])}}
        data-drip-show-form="88924323">
 
         {caption}
@@ -231,9 +243,21 @@ export const DripButton = ({ caption = "I want a sample" }) => (
 export const DripLink = ({ children }) => (
     <a href="https://www.getdrip.com/forms/88924323/submissions/new"
        data-drip-show-form="88924323"
-       onClick={() => window._dcq.push(["showForm", { id: "88924323" }])}
+       onClick={(e) => {e.preventDefault(); window._dcq.push(["showForm", { id: "88924323" }])}}
        style={{textDecoration: 'underline'}}>
 
         {children}
+    </a>
+);
+
+export const WantButton = () => (
+    <a className="btn btn-lg btn-danger btn-icon-right"
+       href="#packages">
+
+        I want this
+
+        <span className="hex-alt hex-alt-big">
+            <i className="fa fa-heart" />
+        </span>
     </a>
 );

@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import { Col as Column, Row } from 'react-bootstrap';
 
-import { SectionHeader, LightSection, Product, Author, PricingColumn, DripButton, Avatar } from './Section';
+import { SectionHeader, LightSection, Product, Author, PricingColumn, DripButton, Avatar, WantButton } from './Section';
 import { Products, BasicProducts, EpicProducts, MajesticProducts, Terms } from './Products';
 import { Authors as AuthorData } from './Authors';
 import bundleCover from './covers/bundle-cover-play-icons.png';
@@ -183,11 +183,15 @@ export const What = () => (
                 <img src={bundleCover} title="Books, videos, cheatsheets, living code" />
             </Column>
             <Column md={4}>
-                <p>On Cyber Monday, 2015 we launched the first React Indie Bundle. It was great, the community loved it, and we donated 10% to our fav opensource projects.</p>
+                <p>React Indie Bundle brings you the best independent materials so you can learn React fast. We have 6 books with over 900 pages, and over 72 hours of video courses. <i>Everything you need to learn React</i></p>
 
-                <p>This year we're launching <i>a new bundle</i>: 6 books 📚 totalling over 600 pages, 72 hours of video courses 📽, cheatsheets 📖  for a quick lookup, living projects 🛠 to play with. <i>Everything you need to become a React Engineer</i></p>
+                <p>And we're donating 10% of the proceeds to top React open source projects so great people can keep making our lives easier.</p>
 
                 <p>Scroll down to see what's inside, or <a href="#packages">jump straight to the packages</a></p>
+
+                <p className="text-center">
+                    <WantButton />
+                </p>
             </Column>
         </Row>
     </div>
@@ -237,6 +241,7 @@ export const Packages = () => (
                            items={BasicProducts}
                            darkItems={EpicProducts.concat(MajesticProducts)}
                            terms={Terms.basic}
+                           gumroad="ZwBEy"
                            md={4} />
 
             <PricingColumn name="Epic Bundle" price="195"
@@ -244,13 +249,22 @@ export const Packages = () => (
                            darkItems={MajesticProducts}
                            terms={Terms.epic}
                            md={4}
+                           gumroad="ZwBEy"
                            featured />
 
             <PricingColumn name="Majestic Bundle" price="450"
                            items={BasicProducts.concat(EpicProducts,
                                                        MajesticProducts,
                                                        Terms.majestic)}
+                           gumroad="jjVvf"
                            md={4} />
+        </Row>
+        <Row>
+            <Column md="6" style={{float: "none", margin: "auto"}} className="text-center">
+                <Testimonial who="Shawn" img={person5}>
+                    <p>I purchased it because I’m interested in learning it here over the holidays and it seemed like <i>the best deal for the quality in content</i>. There are a lot of resources online that talk about it at a surface level but nothing that actually <i>dives into real-world use cases</i>. I’m hoping for more than the usual ToDo single-page app tutorial.</p>
+                </Testimonial>
+            </Column>
         </Row>
     </div>
 );
