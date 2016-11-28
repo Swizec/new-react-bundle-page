@@ -47,9 +47,10 @@ export const Jumbotron = () => (
             </p>
             <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
             <p>&nbsp;</p>
-            <p className="big">Sales open on <i>Cyber Monday, Nov 28th</i></p>
-            <p><DripButton /></p>
-            <p>We're <i>donating 10%</i> of sales to React <i>ecosystem creators</i> that <DripLink>you suggest</DripLink>.</p>
+            <p><DripButton caption="Get your free sample"/></p>
+            <p>Sales close on <i>Monday, Dec 5th</i></p>
+            <p>&nbsp;</p>
+            <p>We're <i>donating 10%</i> of sales to <i>React open source</i> projects that <DripLink>you suggest</DripLink>.</p>
         </header>
     </DarkSection>
 );
@@ -62,7 +63,7 @@ export const JumbotronFooter = () => (
         </p>
         <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
         <p>&nbsp;</p>
-        <p className="big">Sales open on <i>Cyber Monday, Nov 28th</i></p>
-        <p><DripButton /></p>
+        <p><DripButton caption="Get your free sample"/></p>
+        <p className="big">Sales close on <i>Monday, Dec 5th</i></p>
     </div>
 )

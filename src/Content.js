@@ -5,10 +5,16 @@ import _ from 'lodash';
 
 import { Col as Column, Row } from 'react-bootstrap';
 
-import { SectionHeader, LightSection, Product, Author, PricingColumn, DripButton } from './Section';
+import { SectionHeader, LightSection, Product, Author, PricingColumn, DripButton, Avatar } from './Section';
 import { Products, BasicProducts, EpicProducts, MajesticProducts, Terms } from './Products';
 import { Authors as AuthorData } from './Authors';
 import bundleCover from './covers/bundle-cover-play-icons.png';
+
+import person1 from './people/person1.jpg';
+import person2 from './people/person2.jpg';
+import person3 from './people/person3.jpg';
+import person4 from './people/person4.jpg';
+import person5 from './people/person5.jpg';
 
 export const LoveTweets = [
     "797773630654607360",
@@ -47,12 +53,17 @@ export const Tweet = ({ id }) => (
     <TweetEmbed id={id} options={{conversation: 'none'}} />
 );
 
-export const Testimonial = ({ who, src, md = 12, mdOffset = 0, children }) => (
+export const Testimonial = ({ who, src, img, md = 12, mdOffset = 0, children }) => (
     <blockquote className="fancy-blockquote">
         <Row>
+            <Column md={md} mdOffset={mdOffset} className="text-center">
+                <Avatar src={img} size="small" />
+                <small>{who}</small>
+            </Column>
+        </Row>
+        <Row>
             <Column md={md} mdOffset={mdOffset}>
-                <p>{children}</p>
-                <small>{src ? <a href={src}>{who}</a> : who}</small>
+                {children}
             </Column>
         </Row>
     </blockquote>
@@ -108,36 +119,32 @@ export const WhyPain = () => (
     <div>
         <SectionHeader headline='"I spent days learning by myself"'
                        subline="Then Stephen's course made it click in just 10 hours!"/>
-        <Row className="text-center">
-            <h3 className="headline hairline"><i>Here's why 300+ people bought last year's bundle</i></h3>
-        </Row>
         <Row>
             <Column md={6}>
-                <Testimonial who="Adam">
+                <Testimonial who="Adam" img={person1}>
                     <p>There's a lot of React tutorials but very few cohesive books on the topic. Most <i>tutorials describe bits and pieces</i> of React in isolation, and it's possible to figure out how they all fit together, but it would be nice to have a single resource that builds a larger application and describes the typical workflow and project structure. I <i>prefer books over tutorials</i> because of the <i>consistency</i> of one (or a few) author's <i>approach to building apps</i> and the tools they use.</p>
                     <p>The videos and sample projects are nice bonuses, but the <i>books were the reason I purchased</i> the bundle.</p>
                 </Testimonial>
             </Column>
 
             <Column md={6}>
-                <Testimonial who="Dan">
-                    <p>Started survive.js and wanted to support the author. Planned on doing it directly, but once I saw the ability to expand my knowledge into d3 and Native, it was a simple choice.</p>
+                <Testimonial who="Dan" img={person2}>
+                    <p>Started survive.js and wanted to support the author. Planned on doing it directly, but once I saw the <i>ability to expand my knowledge into d3 and Native</i>, it was a simple choice.</p>
                     <p>My overall <i>goal is to become fluent in React/Redux</i> and GraphQL as my front-end stack, in a functional style (as opposed to class-based style). My next purchase will probably be Eric Ellias’s JS education bundle.</p>
                     <p>I have a <i>strong background</i> in programming, but <i>my js-fu is so-so</i>, so this seemed like a <i>good jumpstart into React</i> (and help shore up the old js).</p>
-                    <p>React rocks for tons of reasons, but the main reason I chose to learn more, I watched Dan Abromov’s talk about redux. <i>When I can see such simplistic beauty unfold</i>, it is too enticing not to figure it out.</p>
                 </Testimonial>
             </Column>
         </Row>
 
         <Row>
             <Column md={6}>
-                <Testimonial who="Shawn">
+                <Testimonial who="Shawn" img={person5}>
                     <p>I purchased it because I’m interested in learning it here over the holidays and it seemed like <i>the best deal for the quality in content</i>. There are a lot of resources online that talk about it at a surface level but nothing that actually <i>dives into real-world use cases</i>. I’m hoping for more than the usual ToDo single-page app tutorial.</p>
                 </Testimonial>
             </Column>
 
             <Column md={6}>
-                <Testimonial who="Jaime">
+                <Testimonial who="Jaime" img={person3}>
                     <p>I am a <i>beginner web developer</i>, so far I have a little bit of experience with angular which has changed what I want to develop and how very drastically.</p>
                     <p>I intend to <i>add react to my skill sets</i> by diving into it in the next few weeks once I am finished with my current project, the bundle came in just at the right time to help me prepare for that.</p>
                 </Testimonial>
@@ -146,17 +153,22 @@ export const WhyPain = () => (
 
         <Row>
             <Column md={6}>
-                <Testimonial who="Midhun">
+                <Testimonial who="Midhun" img={person4}>
                     <p><i>Thanks for the awesome bundle!</i> My team just wrapped up a project <i>here at Bloomberg</i> using Angular for the front end. Angular was definitely useful but it really made us fret over few performance issues as our app grew, towards the end of the project.</p>
                     <p>I'm <i>planning on introducing react to my team</i> for our next project and was looking for resources for myself to learn for a long time now.</p>
                 </Testimonial>
             </Column>
         </Row>
 
-        <Row>
-            <Column md={5} mdOffset={4}>
+        <Row className="text-center">
+            <Column md={5} style={{margin: "auto", float: "none"}}>
                 <Tweet id={TestimonialTweets[0]} />
             </Column>
+        </Row>
+
+        <Row className="text-center">
+            <p>&nbsp;</p>
+            <DripButton caption="Get your free sample" />
         </Row>
     </div>
 );

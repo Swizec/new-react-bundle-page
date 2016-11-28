@@ -5813,8 +5813,7 @@ pre {
   font-size: 18px;
   line-height: 2em;
   margin-bottom: 24px;
-  font-weight: bold;
-  font-style: italic;
+  font-weight: 500;
 }
 .fancy-blockquote small {
   font-size: 12px;

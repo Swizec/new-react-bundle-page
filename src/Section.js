@@ -146,14 +146,21 @@ export const Product = ({ left, right, first, src, ...props }) => {
     );
 };
 
+export const Avatar = ({ src, name, title, size }) => (
+    <div className={`box-hex flat-shadow box-${size}`}>
+        <div className="box-dummy" />
+        <figure className="box-inner">
+            <img className="svg-inject" src={src} alt={name}
+                 style={{height: {huge: "217px",
+                                  small: "68px"}[size]
+                        }} />
+        </figure>
+    </div>
+);
+
 export const Author = ({ src, name, title, description, links }) => (
     <div>
-        <div className="box-hex flat-shadow box-huge">
-            <div className="box-dummy" />
-            <figure className="box-inner">
-                <img className="svg-inject" src={src} alt={name} style={{height: "217px"}} />
-            </figure>
-        </div>
+        <Avatar src={src} name={name} title={title} size="huge" />
         <h3 className="text-center">
             {name}
             <small className="block">{title}</small>
@@ -210,6 +217,7 @@ export const PricingColumn = ({ name, price, items, darkItems, terms, md, featur
 export const DripButton = ({ caption = "I want a sample" }) => (
     <a className="btn btn-lg btn-warning btn-icon-right"
        href="https://www.getdrip.com/forms/88924323/submissions/new"
+       onClick={() => window._dcq.push(["showForm", { id: "88924323" }])}
        data-drip-show-form="88924323">
 
         {caption}
@@ -223,6 +231,7 @@ export const DripButton = ({ caption = "I want a sample" }) => (
 export const DripLink = ({ children }) => (
     <a href="https://www.getdrip.com/forms/88924323/submissions/new"
        data-drip-show-form="88924323"
+       onClick={() => window._dcq.push(["showForm", { id: "88924323" }])}
        style={{textDecoration: 'underline'}}>
 
         {children}
