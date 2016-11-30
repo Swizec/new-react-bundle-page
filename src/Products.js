@@ -225,14 +225,18 @@ export const Products = [
     {
         src: "",
         title: "Interviews with ecosystem creators",
+        pricing_title: <b>ALL Interviews with ecosystem creators</b>,
         author: 'The Bundle Authors',
         package: 'majestic',
         price: 75,
         listed: true,
+        exclusive: true,
         body: (<div>
             <p>You say who, we make it happen.</p>
             <p>We're going to interview our favorite React ecosystem creators within a month or two of the bundle. Recorded sessions on Skype/Hangouts, asking <i>your</i> favorite questions. You get the video, a transcript, and a summary.</p>
-            <p>Confirmed interviews so far are:
+            <p>Here's how that works: the more items you pick, the more interviews you get.</p>
+            <p>2 items -> 1 interview.<br />4 items -> 2 interviews<br />6 items -> 4 ...</p>
+            <p><b>Confirmed interviews so far are:</b>
                <ul>
                    <li>Tobias Koppers, sokra - creator of Webpack</li>
                    <li>Michel Weststrate - creator of MobX</li>
@@ -241,6 +245,7 @@ export const Products = [
             </p>
         </div>)
     }
+
 ];
 
 export const BasicProducts = Products.filter(p => p.package === 'basic');
@@ -252,8 +257,13 @@ export const MajesticProducts = Products.filter(p => p.package === 'majestic');
 export const Terms = {
     basic: [
         {
+            title: <b>2 Interviews with ecosystem creators</b>,
+            price: 0
+        },
+
+        {
             title: <b><big>We donate $7</big></b>,
-            price :0
+            price: 0
         },
 
         {
@@ -263,6 +273,11 @@ export const Terms = {
     ],
 
     epic: [
+        {
+            title: <b>4 Interviews with ecosystem creators</b>,
+            price: 0
+        },
+
         {
             title: <b><big>We donate $20</big></b>,
             price: 0

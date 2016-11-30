@@ -234,19 +234,22 @@ export const Authors = () => (
 export const Packages = () => (
     <div>
         <SectionHeader headline="React Indie Bundle Packages"
-                       subline="Pick the bundle that works for you" />
+                       subline={<span>Pick the bundle that works for you or<br /><a className="gumroad-button"
+                      href={`https://gum.co/BNnfs`}
+                      data-gumroad-single-product="true"
+                      target="_blank">Build Your Own</a></span>} />
 
         <Row>
             <PricingColumn name="Basic Bundle" price="69"
                            items={BasicProducts}
-                           darkItems={EpicProducts.concat(MajesticProducts)}
+                           darkItems={EpicProducts.concat(MajesticProducts).filter(p => !p.exclusive)}
                            terms={Terms.basic}
                            gumroad="Gqcy/bundle"
                            md={4} />
 
             <PricingColumn name="Epic Bundle" price="195"
                            items={BasicProducts.concat(EpicProducts)}
-                           darkItems={MajesticProducts}
+                           darkItems={MajesticProducts.filter(p => !p.exclusive)}
                            terms={Terms.epic}
                            md={4}
                            gumroad="ZwBEy/bundle"

@@ -26,7 +26,7 @@ export const Menu = () => (
 
                 <nav className="main-navbar navbar-collapse collapse" role="navigation">
                     <ul className="nav navbar-nav navbar-right">
-                        {['Why React ❤️', 'What 📚 📽', 'Authors 🚶', 'Packages 📦'].map(name => (
+                        {['Why React ❤️', 'What 📚 📽', 'Authors 🚶', 'Build Your Bundle 📦'].map(name => (
                             <li key={name}><a href={`#${linkify(name)}`} >
                             {name}
                             </a></li>
@@ -47,7 +47,10 @@ export const Jumbotron = () => (
             </p>
             <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
             <p>&nbsp;</p>
-            <p><DripButton caption="Get your free sample"/></p>
+            <p><a className="gumroad-button"
+                      href={`https://gum.co/BNnfs`}
+                      data-gumroad-single-product="true"
+                      target="_blank">Build Your Own Bundle</a></p>
             <p>Sales close on <i>Monday, Dec 5th</i></p>
             <p>&nbsp;</p>
             <p>We're <i>donating 10%</i> of sales to <i>React open source</i> projects that <DripLink>you suggest</DripLink>.</p>

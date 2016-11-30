@@ -203,7 +203,7 @@ export const PricingColumn = ({ name, price, items, darkItems, terms, md, featur
             </div>
 
             <ul className="pricing-list">
-                {items.map(({ title }, i) => <li key={i}>{title}</li>)}
+                {items.map(({ title, pricing_title }, i) => <li key={i}>{pricing_title || title}</li>)}
             </ul>
 
             {darkItems ? <ul className="pricing-list" style={{marginTop: "-24px"}}>
