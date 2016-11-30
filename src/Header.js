@@ -53,7 +53,7 @@ export const Jumbotron = () => (
                       target="_blank">Build Your Own Bundle</a></p>
             <p>Sales close on <i>Monday, Dec 5th</i></p>
             <p>&nbsp;</p>
-            <p>We're <i>donating 10%</i> of sales to <i>React open source</i> projects that <DripLink>you suggest</DripLink>.</p>
+            <p>We're <i>donating 10%</i> of sales to <i>React open source</i> projects that you suggest.</p>
         </header>
     </DarkSection>
 );
