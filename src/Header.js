@@ -43,7 +43,7 @@ export const Jumbotron = () => (
         <header className="section-header underline">
             <h1 className="headline hyper hairline">React Indie Bundle</h1>
             <p className="big" style={{color: 'white'}}>
-                <big>Everything you need to become a React engineer.</big>
+                <big>Everything you need to become a better React engineer.</big>
             </p>
             <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
             <p>&nbsp;</p>
