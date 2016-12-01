@@ -4,7 +4,7 @@ import { Col as Column, Row } from 'react-bootstrap';
 
 import { linkify } from './helpers';
 import logo from './logo.svg';
-import { DarkSection, DripButton, DripLink } from './Section';
+import { DarkSection, DripButton, DripLink, WantButton } from './Section';
 import { TestimonialTweets, Tweet, Testimonial } from './Content';
 
 export const Menu = () => (
@@ -47,10 +47,7 @@ export const Jumbotron = () => (
             </p>
             <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
             <p>&nbsp;</p>
-            <p><a className="gumroad-button"
-                      href={`https://gum.co/BNnfs`}
-                      data-gumroad-single-product="true"
-                      target="_blank">Build Your Own Bundle</a></p>
+            <p><WantButton /></p>
             <p>Sales close on <i>Monday, Dec 5th</i></p>
             <p>&nbsp;</p>
             <p>We're <i>donating 10%</i> of sales to <i>React open source</i> projects that you suggest.</p>
