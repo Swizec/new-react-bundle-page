@@ -270,6 +270,11 @@ export const Terms = {
             title: <span><b>Just for you</b>, no DRM ever</span>,
             price: 0
         },
+
+        {
+            title: "Bundle not helping? Your money back",
+            price: 0
+        }
     ],
 
     epic: [
@@ -287,6 +292,12 @@ export const Terms = {
             title: <span><b>Just for you</b>, no DRM ever</span>,
             price: 0
         },
+
+
+        {
+            title: "Bundle not helping? Your money back",
+            price: 0
+        }
     ],
 
     majestic: [
@@ -297,6 +308,12 @@ export const Terms = {
 
         {
             title: <span><b>Just for you</b>, no DRM ever</span>,
+            price: 0
+        },
+
+
+        {
+            title: "Bundle not helping? Your money back",
             price: 0
         }
     ]
