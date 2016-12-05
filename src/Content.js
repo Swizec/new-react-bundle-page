@@ -234,10 +234,10 @@ export const Authors = () => (
 export const Packages = () => (
     <div>
         <SectionHeader headline="React Indie Bundle Packages"
-                       subline={<span>Pick the bundle that works for you or<br /><a className="gumroad-button"
-                      href={`https://gum.co/BNnfs`}
-                      data-gumroad-single-product="true"
-                      target="_blank">Build Your Own</a></span>} />
+                       subline={<span>Pick the bundle that works for you or/* <br /><a className="gumroad-button"
+                                                                              href={`https://gum.co/BNnfs`}
+                                                                              data-gumroad-single-product="true"
+                                                                              target="_blank">Build Your Own</a></span> */} />
 
         <Row>
             <PricingColumn name="Basic Bundle" price="69"

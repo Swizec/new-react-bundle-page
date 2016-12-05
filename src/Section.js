@@ -214,12 +214,12 @@ export const PricingColumn = ({ name, price, items, darkItems, terms, md, featur
              {terms.map(({ title }, i) => <li key={i}>{title}</li>)}
              </ul> : null}
 
-             <a className="gumroad-button"
+             /* <a className="gumroad-button"
                 href={`https://gum.co/${gumroad}?wanted=true`}
                 data-gumroad-single-product="true"
                 target="_blank">Buy Now <i>${price}</i></a>
-             <br />
-             <small>Sales close Dec 5th</small>
+                <br /> */
+             <small>Sales are now closed</small>
         </div>
 
     </Column>

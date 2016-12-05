@@ -47,8 +47,7 @@ export const Jumbotron = () => (
             </p>
             <p className="big">Books 📚, videos 📽, cheatsheets 📖, living code 🛠.</p>
             <p>&nbsp;</p>
-            <p><WantButton /></p>
-            <p>Sales close on <i>Monday, Dec 5th</i></p>
+            <p>Sales are now closed</p>
             <p>&nbsp;</p>
             <p>We're <i>donating 10%</i> of sales to <i>React open source</i> projects that you suggest.</p>
         </header>
